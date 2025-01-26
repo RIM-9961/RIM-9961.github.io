@@ -1,12 +1,12 @@
 :root {
-  --red-0: #f00;
-  --red-1: #ff5252;
-  --red-2: #ff7c7c;
-  --red-3: #ffafaf;
-  --red-4: #ffd0d0;
-  --red-5: #ffe4e4;
-  --red-5-5: #ffecec;
-  --red-6: #fff3f3;
+  --red-0: #000;
+  --red-1: #235919;
+  --red-2: #5a9849;
+  --red-3: #4e9837;
+  --red-4: #4e9440;
+  --red-5: #e8ffe4;
+  --red-5-5: #edffec;
+  --red-6: #f6fff3;
   --grey-9: #999;
   --grey-7: #777;
   --color-archive-year: #000;
@@ -15,7 +15,7 @@
   --color-link: var(--red-1);
   --color-background: #eee;
   --color-code-background: #f5f5f5;
-  --color-header-background: rgba(255,255,255,0.9);
+  --color-header-background: rgba(255,255,255,0);
   --color-footer-background: #fff;
   --color-mobile-nav-background: #fff;
   --color-wrap: #fff;
@@ -24,8 +24,8 @@
   --color-meta-shadow: var(--red-6);
   --color-hover-shadow: rgba(150,150,150,0.1);
   --color-h2-after: var(--red-1);
-  --color-red-6-shadow: rgba(255,78,78,0.6);
-  --color-red-3-shadow: rgba(255,78,78,0.3);
+  --color-red-6-shadow: rgba(122,94,9,0.6);
+  --color-red-3-shadow: rgba(171,151,91,0.9);
   --highlight-nav: #e6e6e6;
   --highlight-scrollbar: #d6d6d6;
   --highlight-background: #f7f7f7;
@@ -49,10 +49,10 @@
 }
 [data-theme="dark"]:root {
   --red-0: var(--red-1);
-  --red-4: rgba(255,208,208,0.5);
-  --red-5: rgba(255,228,228,0.2);
-  --red-5-5: rgba(255,236,236,0.1);
-  --red-6: rgba(255,243,243,0.2);
+  --red-4: rgba(214,255,208,0.5);
+  --red-5: rgba(232,255,228,0.2);
+  --red-5-5: rgba(238,255,236,0.1);
+  --red-6: rgba(246,255,243,0.2);
   --color-archive-year: #999;
   --color-default: #999;
   --color-border: var(--red-5);
@@ -353,6 +353,12 @@ body [data-aos='zoom-in'] {
   font-family: "iconfont";
   content: "\e630";
 }
+.icon-github:before {
+  content: "\e619";
+}
+.icon-bilibili:before {
+  content: "\e603";
+}
 .sidebar-btn-wrapper .sidebar-toc-btn:before {
   font-family: "iconfont";
   content: "\e633";
@@ -503,7 +509,6 @@ body,
 #container {
   height: 100%;
   scroll-behavior: smooth;
-  cursor: var(--cursor-default);
 }
 body {
   width: 100%;
@@ -517,23 +522,6 @@ body {
 body ::selection {
   background: var(--red-1);
   color: #fff;
-}
-a {
-  cursor: var(--cursor-pointer) !important;
-}
-.site-search input {
-  cursor: var(--cursor-text) !important;
-}
-#main span,
-#main p,
-#main code,
-#main kbd,
-#main input,
-#main textarea {
-  cursor: var(--cursor-text) !important;
-}
-#main nav span {
-  cursor: var(--cursor-default) !important;
 }
 #container {
   position: relative;
@@ -645,7 +633,7 @@ a {
   justify-content: center;
   overflow: hidden;
   background: var(--color-header-background);
-  box-shadow: 0 0 15px 5px rgba(0,0,0,0.1);
+  box-shadow: 0 0 15px 5px rgba(255,255,255,0);
   transition: background 1s, top 0.3s;
   z-index: 200;
 }
@@ -784,7 +772,7 @@ a {
   opacity: 0.7;
 }
 .main-nav-icon {
-  cursor: var(--cursor-pointer);
+  cursor: pointer;
   padding: 15px 5px;
   display: flex;
   align-items: center;
@@ -1639,7 +1627,6 @@ a {
   height: 10px;
   background: linear-gradient(to left, var(--red-1) 50%, transparent 0%) repeat-x 0 0/100px 10px;
   transition: opacity 0.3s;
-  animation: transform-all 3s linear infinite;
   filter: drop-shadow(0px 0px 2px var(--red-1));
 }
 #footer-info {
@@ -1952,7 +1939,7 @@ pre .javascript .function {
   margin: 5px;
   z-index: 1;
   filter: invert(50%);
-  cursor: var(--cursor-pointer);
+  cursor: pointer;
   color: #fff;
   transition: 0.3s;
 }
@@ -1965,13 +1952,13 @@ pre .javascript .function {
   font-weight: bold;
   z-index: 1;
   filter: invert(50%);
-  cursor: var(--cursor-pointer);
+  cursor: pointer;
 }
 .code-expand {
   margin: 5px;
   filter: invert(50%);
   z-index: 1;
-  cursor: var(--cursor-pointer);
+  cursor: pointer;
   transition: 0.3s;
   transform: rotate(0deg);
   color: #fff;
@@ -2375,6 +2362,15 @@ pre .javascript .function {
 }
 .sidebar-social-icon:hover {
   transform: scale(1.2);
+}
+.icon-github {
+  color: #191717;
+}
+[data-theme="dark"] .icon-github {
+  color: #bc88ff;
+}
+.icon-bilibili {
+  color: #00a1d6;
 }
 .sidebar-menu-icon,
 .sidebar-menu-link {
