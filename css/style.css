@@ -567,9 +567,6 @@ body ::selection {
     margin: 0 1%;
   }
 }
-#content.sidebar-right {
-  flex-direction: row-reverse;
-}
 #mask {
   z-index: 1000;
   position: fixed;
@@ -1719,7 +1716,7 @@ body ::selection {
   box-shadow: 0 0.3125rem 0.625rem -0.125rem var(--highlight-scrollbar);
 }
 .article-entry figure ::-webkit-scrollbar {
-  width: 10px;
+  width: 7px;
   height: 10px;
   background-color: transparent;
 }
@@ -2208,19 +2205,19 @@ pre .javascript .function {
 #sidebar {
   display: none;
 }
-.sidebar-left #sidebar,
-.sidebar-right #sidebar {
+.sidebar-right #sidebar,
+.sidebar-left #sidebar {
   display: block;
 }
 @media screen and (max-width: 959px) {
-  .sidebar-left #sidebar,
-  .sidebar-right #sidebar {
+  .sidebar-right #sidebar,
+  .sidebar-left #sidebar {
     display: none;
   }
 }
 @media screen and (min-width: 960px) {
-  .sidebar-left #sidebar,
-  .sidebar-right #sidebar {
+  .sidebar-right #sidebar,
+  .sidebar-left #sidebar {
     width: 23%;
     margin: 0 1%;
     height: inherit;
