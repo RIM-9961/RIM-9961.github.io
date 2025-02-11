@@ -632,7 +632,7 @@ body ::selection {
   background: var(--color-header-background);
   box-shadow: 0 0 15px 5px rgba(255,255,255,0);
   transition: background 1s, top 0.3s;
-  z-index: 200;
+  z-index: 2000;
 }
 #header-nav:hover {
   background: rgba(255,255,255,0.95);
@@ -2246,7 +2246,7 @@ pre .javascript .function {
 }
 .sidebar-wrapper.wrap-sticky {
   position: sticky;
-  top: 5px;
+  top: 86px;
 }
 .sidebar-wrap {
   width: 100%;
