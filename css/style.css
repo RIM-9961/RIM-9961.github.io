@@ -2231,6 +2231,9 @@ pre .javascript .function {
 }
 .sidebar-wrapper {
   transition: 0.3s;
+  position: sticky;
+  top: 86px;
+  z-index: 1000;
 }
 .sidebar-wrapper .aos-animate {
   transition-property: initial !important;
