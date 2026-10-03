@@ -13,8 +13,8 @@
   --color-default: #555;
   --color-border: var(--red-3);
   --color-link: var(--red-1);
-  --color-background: #eee;
-  --color-code-background: #f5f5f5;
+  --color-background: #f0f5ee;
+  --color-code-background: #f3f8f1;
   --color-header-background: rgba(255,255,255,0);
   --color-footer-background: #fff;
   --color-mobile-nav-background: #fff;
@@ -24,8 +24,8 @@
   --color-meta-shadow: var(--red-6);
   --color-hover-shadow: rgba(150,150,150,0.1);
   --color-h2-after: var(--red-1);
-  --color-red-6-shadow: rgba(122,94,9,0.6);
-  --color-red-3-shadow: rgba(171,151,91,0.9);
+  --color-red-6-shadow: rgba(35,89,25,0.45);
+  --color-red-3-shadow: rgba(90,152,73,0.8);
   --highlight-nav: #e6e6e6;
   --highlight-scrollbar: #d6d6d6;
   --highlight-background: #f7f7f7;
@@ -2201,6 +2201,95 @@ pre .javascript .function {
   .sidebar-top-taichi {
     background: var(--top-icon) no-repeat center/100%;
   }
+}
+.tagcloud a {
+  display: inline-block;
+  margin: 5px 5px 0 0;
+}
+[data-theme="dark"] .widget-wrap {
+  box-shadow: 0 0 10px 3px var(--color-hover-shadow);
+}
+.widget-wrap {
+  margin: 40px 0;
+  background: var(--color-wrap);
+  border-radius: 10px;
+  transition: 0.3s;
+}
+.widget-wrapper {
+  transition: 0.3s;
+}
+.widget-wrapper .aos-animate {
+  transition-property: initial !important;
+}
+.widget-wrapper .aos-animate:hover {
+  box-shadow: 0 0 10px 3px var(--color-hover-shadow);
+}
+.widget-wrapper:hover {
+  transform: scale(1.015);
+}
+.widget-title {
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  color: var(--grey-9);
+  padding: 20px 20px 10px;
+}
+.widget {
+  color: var(--grey-7);
+  padding: 10px 20px;
+}
+.widget li {
+  color: var(--color-link);
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+.widget a,
+.widget span {
+  color: var(--color-link);
+  text-decoration: none;
+  opacity: 0.85;
+  transition: 0.3s;
+}
+.widget a:hover,
+.widget span:hover {
+  opacity: 1;
+  color: var(--red-0);
+}
+.widget span {
+  margin-left: 5px;
+}
+.widget ul ul,
+.widget ol ul,
+.widget dl ul,
+.widget ul ol,
+.widget ol ol,
+.widget dl ol,
+.widget ul dl,
+.widget ol dl,
+.widget dl dl {
+  margin-left: 15px;
+  list-style: none;
+}
+.widget li {
+  margin: 10px 0;
+}
+.widget li:before {
+  content: "";
+  display: inline-block;
+  width: 5px;
+  height: 10px;
+  background: var(--color-h2-after);
+  vertical-align: middle;
+  margin-right: 11px;
+  box-shadow: 0 2px 12px var(--color-red-6-shadow);
+  opacity: 0.5;
+  transition: 0.3s;
+}
+.widget li:hover:before {
+  width: 5px;
+  height: 5px;
+  border-radius: 50%;
+  opacity: 1;
 }
 #sidebar {
   display: none;
